@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: practice-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: practice
+
+  template:
+    metadata:
+      labels:
+        app: practice
+
+    spec:
+      containers:
+        - name: practice-container
+          image: practice-app
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
