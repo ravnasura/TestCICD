@@ -16,6 +16,13 @@ stage('Checkout') {
             }
         }
 
+ stage('Docker Build') {
+            steps {
+                echo 'Building Docker Image'
+                sh 'docker build -t practice-app:latest .'
+            }
+        }
+
  stage('Package') {
             steps {
                 echo 'Build completed successfully'
