@@ -11,7 +11,7 @@ stage('Checkout') {
             steps {
                 echo 'Checking source code'
             }
-}
+         }
 
  stage('Build') {
             steps {
